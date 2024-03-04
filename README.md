@@ -15,10 +15,12 @@ Run container :
 
 
 # Additional informations
-I commited .env but we should avoid it and just commit a .env.example with placeholder data. I did it just for the test purpose
+- I did not had time to add the research endpoint.
 
-I got some problems running a mysql server on docker. For some reasons it didn't accepted my password and database name I was sending as env variable.
+- I commited .env but we should avoid it and just commit a .env.example with placeholder data. I did it just for the test purpose
 
-I didn't had time to implement db creation so we have to assume it alread exists with the correct structure.
+- I got some problems running a mysql server on docker. For some reasons it didn't accepted my password and database name I was sending as env variable.
 
-I also didn't had time to implement an auth system but we should keep in mind that some routes shouldn't remain accessible such as CREATE, UPDATE and DELETE.
+- I didn't had time to implement db creation so we have to assume it alread exists with the correct structure.
+
+- I also didn't had time to implement an auth system but we should keep in mind that some routes shouldn't remain accessible such as CREATE, UPDATE and DELETE.
