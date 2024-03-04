@@ -1,4 +1,6 @@
 import fetch from 'node-fetch';
+import db from "../utils/db.js"
+const {Characters, Movies} = db
 
 async function fetchData() {
     console.log(`Loading characters ...`)
@@ -19,7 +21,21 @@ async function fetchData() {
         name: title
     }))
 
+    console.log(`Importing ${charactersData.length} characters ...`)
+    try {
+        await Characters.bulkCreate(charactersData);
+    } catch (error) {
+        throw new Error('Error bulk creating characters:', error);
+    }
 
+    console.log(`Importing ${moviesData.length} movies ...`)
+    try {
+        await Movies.bulkCreate(moviesData);
+    } catch (error) {
+        throw new Error('Error bulk creating characters:', error);
+    }
+
+    console.log("Import finished ! ✨")
 }
 
 
