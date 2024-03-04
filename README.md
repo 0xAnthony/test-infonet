@@ -1,5 +1,11 @@
 # Infonet's technical tests
 
+# Commands
+
+Start server : `npm run start`
+Import data from API : `npm run starwars:import`
+Test database connection : `npm run db:test`
+
 # Start database
 Build container :
 `docker build -t my-mysql .`
